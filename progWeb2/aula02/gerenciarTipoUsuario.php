@@ -18,5 +18,54 @@
         </p>
     </form>
 
+    <h2>Tipos de Usuários Cadastrados</h2>
+
+    <?php
+        $servername = "localhost";
+        $username = "root";
+        $password = "root";
+        $dbname = "loja";
+
+        // Create connection
+        $conn = new mysqli($servername, $username, $password, $dbname);
+        // Check connection
+        if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+        }
+
+        $sql = "SELECT * FROM tipo_usuario";
+        $result = $conn->query($sql);
+
+        if ($result->num_rows > 0) {
+        // output data of each row
+
+        echo "<table border=1>
+        <tr>
+            <th>CÓDIGO</th>
+            <th>DESCRIÇÃO</th>
+            <th>AÇÕES</th>
+        </tr>";
+
+        
+        while($row = $result->fetch_assoc()) {
+            echo "<tr>
+                <td>".$row["idtipo_usuario"]."</td>
+                <td>".$row["descricao"]."</td>
+                <td>
+                <a href ='gerenciarTipoUsuario.php?id=". $row["idtipo_usuario"] ."'>Alterar</a>
+                <a href ='gerenciarTipoUsuario.php?id=". $row["idtipo_usuario"] ."'>Excluir</a>
+                </td>
+            </tr>";
+        }
+        echo "</table>";
+        
+    } else {
+        echo "Nenhum tipo usuário encontrado!";
+    }
+    $conn->close();
+    
+    ?>
+
 </body>
 </html>
+
