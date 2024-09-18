@@ -22,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error deleting record: " . $conn->error;
 }
 
-header(header: "gerenciarTipoUsuario.php");
-
 $conn->close();
+
+header("location:gerenciarTipoUsuario.php");
 ?>

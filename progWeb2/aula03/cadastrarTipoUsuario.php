@@ -19,6 +19,8 @@ VALUES ('". $descricao ."');";
 
     if ($conn->query($sql) === TRUE) {
         echo "Tipo usuário cadastrado com sucesso!";
+        //Redirecionar 
+        header("location:gerenciarTipoUsuario.php");
     } else {
         echo "Ocorreu um erro: " . $sql . "<br>" . $conn->error;
     }

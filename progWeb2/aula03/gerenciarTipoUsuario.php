@@ -5,9 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciar Tipo Usuário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
-<b>
+<script>
+    function minhaFuncao(){
+        return window.prompt('Confirm');
+    }
+</script>
+
+<body>
     <h1>Gerenciar Tipo Usuário</h1>
 
     <form action="cadastrarTipoUsuario.php" method="post">
@@ -51,12 +58,10 @@
                     <td>". $row["idtipo_usuario"] ."</td>
                     <td>". $row["descricao"] ."</td>
                     <td>
-                        <a href='gerenciarTipoUsuario.php?id="
-                        . $row["idtipo_usuario"] .
-                        "'>Alterar</a>
-                        <a onclick='return confirm('Deseja realmente excluir?')' href='excluirTipoUsuario.php?id="
-                        . $row["idtipo_usuario"] .
-                        "'>Excluir</a>
+                        <a onclick = 'minhaFuncao()' href='gerenciarTipoUsuario.php?id=". $row["idtipo_usuario"] . "'>
+                        <img src='img/edit.svg' alt='Alterar'>
+                         </a>
+                        <a onclick='return confirm('Deseja realmente excluir?')' href='excluirTipoUsuario.php?id=". $row["idtipo_usuario"] ."'> <img src='img/delete.svg' alt='Excluir'></a>
                     </td>
                 </tr>";
         }
@@ -67,13 +72,10 @@
     }
     $conn->close();
     ?>
-
- 
-    
-
+   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 
 
 </body>
-
 </html>
