@@ -12,7 +12,7 @@ public class Principal {
         "\nMatricula: " + novoAluno.getMatricula() + 
         "\nNotas: " +  Arrays.toString(novoAluno.getNotas()) );
 
-        var media = novoAluno.calcularMedias();
+        float media = novoAluno.calcularMedias();
         System.out.println("\n\nMedia: " + media);
         System.out.println("\nSituação do aluno: " + novoAluno.situacaoAluno(media));
     }

@@ -11,7 +11,6 @@ public class Aluno {
     private int matricula; 
     private float[] notas;
 
-
     public Aluno(String nome, int matricula, float[] notas){
         this.nome = nome;
         this.matricula = matricula;
