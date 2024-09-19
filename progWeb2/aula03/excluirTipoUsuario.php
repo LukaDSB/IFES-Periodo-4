@@ -3,6 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "loja";
+
 $id = $_GET["id"];
 
 // Create connection
@@ -13,7 +14,7 @@ if ($conn->connect_error) {
 }
 
 // sql to delete a record
-$sql = "DELETE FROM tipo_usuario WHERE idtipo_usuario=" . $id . "";
+$sql = "DELETE FROM tipo_usuario WHERE idtipo_usuario=" . $id;
 
 if ($conn->query($sql) === TRUE) {
   echo "Record deleted successfully";
@@ -21,7 +22,7 @@ if ($conn->query($sql) === TRUE) {
   echo "Error deleting record: " . $conn->error;
 }
 
-header("gerenciarTipoUsuario.php");
-
 $conn->close();
+
+header("location:gerenciarTipoUsuario.php");
 ?>

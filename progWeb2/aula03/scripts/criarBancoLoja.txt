@@ -1,0 +1,10 @@
+------ criação do banco loja
+CREATE SCHEMA `loja` DEFAULT CHARACTER SET utf8 ;
+
+CREATE TABLE `loja`.`tipo_usuario` (
+  `idtipo_usuario` INT NOT NULL AUTO_INCREMENT,
+  `descricao` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`idtipo_usuario`),
+  UNIQUE INDEX `descricao_UNIQUE` (`descricao` ASC) VISIBLE);
+
+  
