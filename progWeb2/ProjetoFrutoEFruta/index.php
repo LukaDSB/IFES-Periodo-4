@@ -33,9 +33,30 @@
                                 Receitas
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Sobremas</a></li>
-                                <li><a class="dropdown-item" href="#">Fit</a></li>
-                                <li><a class="dropdown-item" href="#">Risotos</a></li>
+
+                                <?php
+                                $servername = "localhost";
+                                $username = "root";
+                                $password = "root";
+                                $dbname = "frutoefruta";
+
+                                $conn = new mysqli($servername, $username, $password, $dbname);
+                                if ($conn->connect_error) {
+                                    die("Connection failed: " . $conn->connect_error);
+                                }
+
+                                $sql = "SELECT tiporeceita FROM tiporeceitas";
+                                $result = $conn->query($sql);
+
+                                if ($result->num_rows > 0) {
+                                    while ($row = $result->fetch_assoc()) {
+                                        echo "<li><a class='dropdown-item' href='#'>" . $row["tiporeceita"] . "</a></li>";
+                                    }
+                                } else {
+                                    echo "0 results";
+                                }
+                                $conn->close();
+                                ?>
                             </ul>
                         </li>
 
@@ -123,8 +144,8 @@
 
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    echo 
-                    "<div class='card'>
+                    echo
+                        "<div class='card'>
                         <img src='src/img/" . $row["idreceita"] . ".jpg' class='card-img-top' alt=' " . $row["nomereceita"] . " '>
                         <div class='card-body'>
                             <h5 class='card-title'>" . $row["nomereceita"] . "</h5>
