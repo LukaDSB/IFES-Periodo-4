@@ -1,5 +1,4 @@
 public class PessoaFisica extends Cliente{
-
     private int cpf;
     private String nome;
 

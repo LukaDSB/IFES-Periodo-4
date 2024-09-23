@@ -7,7 +7,7 @@ public class Cliente {
     public Cliente(int numeroConta, String agencia, float saldo, float limite){
         this.numeroConta = numeroConta;
         this.agencia = agencia;
-        this.saldo = saldo;
+        setSaldo(saldo);
         setLimite(limite);
     }
 

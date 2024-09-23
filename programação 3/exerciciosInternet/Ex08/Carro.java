@@ -1,8 +1,8 @@
-package Ex07;
+package Ex08;
 
 /*Implemente uma classe chamada ?Carro? com atributos para 
 armazenar a marca, o modelo e a velocidade atual do carro. 
-Adicione métodos para acelerar, frear e exibir a velocidade atual. */
+Adicione mï¿½todos para acelerar, frear e exibir a velocidade atual. */
 
 public class Carro {
     private String marca;
