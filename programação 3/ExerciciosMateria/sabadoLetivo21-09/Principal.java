@@ -4,7 +4,7 @@ public class Principal {
         PessoaFisica novaPessoaFisica = new PessoaFisica(
             01, 
             "01", 
-            1000, 
+            100, 
             123, 
             "Lucas"
         );
@@ -12,7 +12,7 @@ public class Principal {
         PessoaJuridica novaPessoaJuridica = new PessoaJuridica(
             03, 
             "03", 
-            4900, 
+            2500, 
             321, 
             "Teste", 
             "Teste"
@@ -21,9 +21,9 @@ public class Principal {
         novaPessoaFisica.imprimirExtrato();
         novaPessoaJuridica.imprimirExtrato();
 
-        novaPessoaFisica.transferir(novaPessoaJuridica,500);
+        // novaPessoaFisica.transferir(novaPessoaJuridica,50);
 
-        novaPessoaFisica.imprimirExtrato();
-        novaPessoaJuridica.imprimirExtrato();
+        // novaPessoaFisica.imprimirExtrato();
+        // novaPessoaJuridica.imprimirExtrato();
     }
 }

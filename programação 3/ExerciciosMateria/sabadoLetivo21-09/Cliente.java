@@ -7,8 +7,8 @@ public class Cliente {
     public Cliente(int numeroConta, String agencia, float saldo, float limite){
         this.numeroConta = numeroConta;
         this.agencia = agencia;
-        setSaldo(saldo);
         setLimite(limite);
+        setSaldo(saldo);
     }
 
     public float sacar(float valor){
@@ -47,7 +47,7 @@ public class Cliente {
 
     public void setSaldo(float saldo) {
         if (saldo > limite) {
-            throw new IllegalArgumentException("Erro: O saldo não pode exceder o limite de " + limite + ".");
+            throw new IllegalArgumentException("Erro: O saldo não pode exceder o limite de " + getLimite() + ".");
         }
         this.saldo = saldo;
     }
