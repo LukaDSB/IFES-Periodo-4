@@ -1,4 +1,4 @@
-public class Cliente {
+abstract public class Cliente {
     private int numeroConta;
     private String agencia;
     private float saldo;
@@ -7,7 +7,7 @@ public class Cliente {
     public Cliente(int numeroConta, String agencia, float saldo, float limite){
         this.numeroConta = numeroConta;
         this.agencia = agencia;
-        setLimite(limite);
+        this.limite = limite;
         setSaldo(saldo);
     }
 
@@ -36,14 +36,7 @@ public class Cliente {
         return true;
     }
 
-    public void imprimirExtrato(){
-        System.out.println(
-            "\nNº conta: " + getNumeroConta() + 
-            "\nAgencia: " + getAgencia() + 
-            "\nSaldo: " + getSaldo() + 
-            "\nLimite: " + getLimite()
-        );
-    }
+    abstract public void imprimirExtrato();
 
     public void setSaldo(float saldo) {
         if (saldo > limite) {

@@ -36,9 +36,12 @@ public class PessoaFisica extends Cliente{
 
     @Override
     public void imprimirExtrato(){
-        super.imprimirExtrato();
         System.out.println(
-            "Cpf: "+ cpf 
+            "\nNumero da conta: " + super.getNumeroConta()
+            + "\nAgencia: " + super.getAgencia()
+            + "\nSaldo: " + super.getSaldo()
+            + "\nLimite: " + super.getLimite()
+            + "\nCpf: "+ cpf 
             + "\nNome: " + nome
         );
     }

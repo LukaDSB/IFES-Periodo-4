@@ -45,13 +45,16 @@ public class PessoaJuridica extends Cliente {
         this.naturezaJuridica = naturezaJuridica;
     }
 
+    
     @Override
     public void imprimirExtrato(){
-        super.imprimirExtrato();
         System.out.println(
-            "Cnpj: " + cnpj 
-            + "\nRazao Social: " + razaoSocial 
-            + "\nNatureza Juridica: " + naturezaJuridica
+            "\nNumero da conta: " + super.getNumeroConta()
+            + "\nAgencia: " + super.getAgencia()
+            + "\nSaldo: " + super.getSaldo()
+            + "\nLimite: " + super.getLimite()
+            + "\nCnpj: "+ cnpj 
+            + "\nNaturezaJuridica: " + naturezaJuridica
         );
     }
 }

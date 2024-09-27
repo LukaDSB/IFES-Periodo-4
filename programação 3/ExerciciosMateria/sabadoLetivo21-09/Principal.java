@@ -1,5 +1,4 @@
-
-public class Principal {
+  public class Principal {
     public static void main(String[] args) {
         PessoaFisica novaPessoaFisica = new PessoaFisica(
             01, 
@@ -21,9 +20,9 @@ public class Principal {
         novaPessoaFisica.imprimirExtrato();
         novaPessoaJuridica.imprimirExtrato();
 
-        // novaPessoaFisica.transferir(novaPessoaJuridica,50);
+        novaPessoaFisica.transferir(novaPessoaJuridica,50);
 
-        // novaPessoaFisica.imprimirExtrato();
-        // novaPessoaJuridica.imprimirExtrato();
+        novaPessoaFisica.imprimirExtrato();
+        novaPessoaJuridica.imprimirExtrato();
     }
 }
