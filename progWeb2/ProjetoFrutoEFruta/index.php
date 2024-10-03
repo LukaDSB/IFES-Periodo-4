@@ -11,7 +11,6 @@
 </head>
 
 <body>
-
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -69,26 +68,20 @@
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar receita..."
-                            aria-label="Search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar receita..." aria-label="Search">
                         <button class="btn btn-outline-success" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>
         </nav>
-
     </header>
 
     <main>
-
         <section id="main-carousel">
             <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
@@ -99,33 +92,28 @@
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="src/img/carrossel-img2.jpg" class="d-block w-100 carousel-item-img"
-                            alt="Economize e ganhe em saúde!">
+                        <img src="src/img/carrossel-img2.jpg" class="d-block w-100 carousel-item-img" alt="Economize e ganhe em saúde!">
                         <div class="carousel-caption d-none d-md-block">
                             <h2 class="poetsen-one-regular">Economize e ganhe em saúde!</h2>
                         </div>
                     </div>
-
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
                     data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </section>
-
         <section>
             <h2 class="poetsen-one-regular">Receitas para economizar e ganhar saúde</h2>
             <h4>Nossas receitas ajudam você a aproveitar melhor os alimentos, economizar, ganhar tempo e praticidade
             </h4>
         </section>
-
         <section id="main-receitas">
             <?php
             $servername = "localhost";
@@ -159,20 +147,14 @@
             }
             $conn->close();
             ?>
-
         </section>
-
     </main>
-
     <footer>
-
         <p>contato:<a href="mailto:email@frutafruto.com.br">email@frutafruto.com.br</a></p>
-
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-
+        crossorigin="anonymous">
+    </script>
 </body>
-
 </html>
