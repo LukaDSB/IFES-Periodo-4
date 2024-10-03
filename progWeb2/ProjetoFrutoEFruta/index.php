@@ -36,7 +36,7 @@
                                 <?php
                                 $servername = "localhost";
                                 $username = "root";
-                                $password = "root";
+                                $password = "*Movorurari123";
                                 $dbname = "frutoefruta";
 
                                 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -44,7 +44,7 @@
                                     die("Connection failed: " . $conn->connect_error);
                                 }
 
-                                $sql = "SELECT tiporeceita FROM tiporeceitas";
+                                $sql = "SELECT tiporeceita FROM tipodereceita";
                                 $result = $conn->query($sql);
 
                                 if ($result->num_rows > 0) {
@@ -118,7 +118,7 @@
             <?php
             $servername = "localhost";
             $username = "root";
-            $password = "root";
+            $password = "*Movorurari123";
             $dbname = "frutoefruta";
 
             $conn = new mysqli($servername, $username, $password, $dbname);

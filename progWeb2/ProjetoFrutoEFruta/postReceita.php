@@ -1,28 +1,27 @@
 <?php
-        $servername = "localhost";
-        $username = "root";
-        $password = "root";
-        $dbname = "frutoefruta";
+    $servername = "localhost";
+    $username = "root";
+    $password = "*Movorurari123";
+    $dbname = "frutoefruta";
 
-        $nomereceita = $_POST['nomereceita'];
-        $descricao = $_POST['descricao'];
+    $nomereceita = $_POST['nomereceita'];
+    $descricao = $_POST['descricao'];
 
 
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-        }
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-        $sql = "INSERT INTO receita (nomereceita, descricao)
-        VALUES ('" . $nomereceita ."','" . $descricao . "')";
+    if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+    }
 
-        if (mysqli_query($conn, $sql)) {
-        echo "New record created successfully";
-        } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-        }
+    $sql = "INSERT INTO receita (nomereceita, descricao)
+    VALUES ('" . $nomereceita ."','" . $descricao . "')";
 
-        mysqli_close($conn);
-    ?>  
+    if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+    } else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
+
+    mysqli_close($conn);
+?>  
